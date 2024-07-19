@@ -4,7 +4,9 @@
 postgres-data/
 .DS_Store
 */.DS_Store
-
+Dockerfile.prod
+docker-compose.prod.yml
+bradrice/wsgi.py
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python

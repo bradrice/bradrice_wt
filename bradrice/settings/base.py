@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # import environ
 import os
+print (os.environ)
 
 # env = environ.Env(
 #     # set casting, default value
@@ -98,7 +99,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get('DATABASE_NAME'),
         "USER": os.environ.get('DATABASE_USER'),
-        "PASSWORD": os.environ.get('DATABASE_Pw'),
+        "PASSWORD": os.environ.get('DATABASE_PW'),
         "HOST": "db",
         "PORT": "5432",
     }

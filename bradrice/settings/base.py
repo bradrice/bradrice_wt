@@ -25,8 +25,6 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Take environment variables from .env file
 os.environ.get(os.path.join(BASE_DIR, '.env'))
 
-# False if not in os.environ because of casting above
-DEBUG = env('DEBUG')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/

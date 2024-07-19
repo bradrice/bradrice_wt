@@ -1,5 +1,6 @@
 .env
 .env.prod
+.env.prod.db
 
 postgres-data/
 .DS_Store

@@ -11,8 +11,8 @@ then
     echo "PostgreSQL started"
 fi
 
-python manage.py makemigrations --settings=app.settings.production
-python manage.py migrate --settings=app.settings.production
-python manage.py collectstatic --settings=app.settings.production --no-input --clear
-python manage.py update_index --settings=app.settings.production
+# python manage.py makemigrations --settings=bradrice.settings.production
+# python manage.py migrate --settings=bradrice.settings.production
+# python manage.py collectstatic --settings=bradrice.settings.production --no-input --clear
+# python manage.py update_index --settings=bradrice.settings.production
 exec "$@"

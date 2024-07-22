@@ -11,20 +11,24 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# import environ
 import os
-print (os.environ)
+import environ
 
-# env = environ.Env(
-#     # set casting, default value
-#     DEBUG=(bool, False)
-# )
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-# Take environment variables from .env file
-os.environ.get(os.path.join(BASE_DIR, '.env'))
+# production
+environ.Env.read_env(os.path.join(BASE_DIR, '.env.prod'))
+#development
+#environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -97,9 +101,9 @@ WSGI_APPLICATION = "bradrice.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get('DATABASE_NAME'),
-        "USER": os.environ.get('DATABASE_USER'),
-        "PASSWORD": os.environ.get('DATABASE_PW'),
+        "NAME": env('DATABASE_NAME'),
+        "USER": env('DATABASE_USER'),
+        "PASSWORD": env('DATABASE_PW'),
         "HOST": "db",
         "PORT": "5432",
     }

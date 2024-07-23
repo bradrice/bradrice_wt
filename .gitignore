@@ -8,6 +8,7 @@ postgres-data/
 */.DS_Store
 bradrice/wsgi.py
 entrypoint.prod.sh
+manage.py
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python

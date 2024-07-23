@@ -16,7 +16,8 @@ DJANGO_ROOT = '/home/app/'
 
 SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
-ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "icons.bradrice.com", "[::1]"]
+CSRF_TRUSTED_ORIGINS = ["https://icons.bradrice.com"]
 
 # Database PostgreSQL
 DATABASES = {

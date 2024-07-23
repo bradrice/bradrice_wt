@@ -6,8 +6,6 @@
 postgres-data/
 .DS_Store
 */.DS_Store
-Dockerfile.prod
-docker-compose.prod.yml
 bradrice/wsgi.py
 entrypoint.prod.sh
 

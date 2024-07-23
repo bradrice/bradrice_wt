@@ -5,7 +5,7 @@ import environ
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=(bool, False)
 )
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env.prod'))
@@ -19,7 +19,7 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ["*"]
 # ALLOWED_HOSTS = ["localhost", "localhost:8083", "127.0.0.1", "icons.bradrice.com", "[::1]"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-CSRF_TRUSTED_ORIGINS = ['http://loalhost:8083', 'https://icons.bradrice.com', 'http://icons.bradrice.com']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8083', 'http://localhost:8000', 'https://icons.bradrice.com', 'http://icons.bradrice.com']
 
 
 

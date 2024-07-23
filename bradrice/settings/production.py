@@ -18,6 +18,9 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "icons.bradrice.com", "[::1]"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = ['https://icons.bradrice.com', 'http://icons.bradrice.com']
+
+
 
 # Database PostgreSQL
 DATABASES = {

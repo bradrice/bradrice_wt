@@ -2,12 +2,14 @@
 .env.prod
 .env.prod.db
 
+
 postgres-data/
 .DS_Store
 */.DS_Store
 Dockerfile.prod
 docker-compose.prod.yml
 bradrice/wsgi.py
+entrypoint.prod.sh
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python

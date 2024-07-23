@@ -1,4 +1,4 @@
-{% load static wagtailcore_tags wagtailuserbar %}
+{% load static wagtailcore_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +22,10 @@
         {% if request.in_preview_panel %}
         <base target="_blank">
         {% endif %}
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍩</text></svg>"/>
+
 
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/bradrice.css' %}">
@@ -31,16 +35,24 @@
         {% endblock %}
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
-        {% wagtailuserbar %}
+   <body class="{% block body_class %}{% endblock %}">
 
-        {% block content %}{% endblock %}
+        {% include "includes/header.html" %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/bradrice.js' %}"></script>
+{# Add a unique identifier: #}
+<main id="main">
+  {% block content %}{% endblock %}
+</main>
 
-        {% block extra_js %}
-        {# Override this in templates to add extra javascript #}
-        {% endblock %}
-    </body>
+    {# Add this to the file: #}
+    {% include "includes/footer.html" %}
+
+    {# Global javascript #}
+    <script type="text/javascript" src="{% static 'js/bradrice.js' %}"></script>
+
+    {% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+    {% endblock %}
+</body>
+
 </html>

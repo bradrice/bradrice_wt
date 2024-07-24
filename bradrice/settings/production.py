@@ -12,7 +12,7 @@ print("in production", BASE_DIR)
 
 DJANGO_ROOT = '/home/app/'
 
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 ALLOWED_HOSTS = ["icons.bradrice.com", "localhost:8009", "0.0.0.0:8009"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_TRUSTED_ORIGINS = ['https://icons.bradrice.com', 'http://0.0.0.0:8009']

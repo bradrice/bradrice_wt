@@ -19,10 +19,11 @@ print("in production")
 DJANGO_ROOT = '/home/app/'
 
 SECRET_KEY = env("SECRET_KEY")
-DEBUG = False
-ALLOWED_HOSTS = ["icons.bradrice.com", "localhost:8009", "http://0.0.0.0:8009"]
+ALLOWED_HOSTS = ["icons.bradrice.com", "localhost:8009", "0.0.0.0:8009"]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 CSRF_TRUSTED_ORIGINS = ['https://icons.bradrice.com', 'http://0.0.0.0:8009']
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_DOMAIN = 'icons.bradrice.com'
 
 
 

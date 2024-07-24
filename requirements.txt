@@ -2,5 +2,6 @@ Django>=4.2.1,<5.0
 wagtail>=6.1,<6.2
 psycopg2-binary==2.9.2
 gunicorn==20.1.0
+python-dotenv==1.0.1
 
 

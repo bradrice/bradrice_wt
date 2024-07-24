@@ -1,20 +1,14 @@
 # app/app/settings/production.py
 from .base import *
 import os
-import environ
 
-env = environ.Env(
-    # set casting, default value
-    DEBUG=(bool, False)
-)
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-environ.Env.read_env(os.path.join(BASE_DIR, '.env.prod'))
 
 
-print("in production")
+print("in production", BASE_DIR)
 
 DJANGO_ROOT = '/home/app/'
 
@@ -31,12 +25,12 @@ print(CSRF_TRUSTED_ORIGINS)
 # Database PostgreSQL
 DATABASES = {
     'default': {
-        'ENGINE': env("SQL_ENGINE"),
-        'NAME': env("DATABASE_NAME"),
-        'USER': env("DATABASE_USER"),
-        'PASSWORD': env("DATABASE_PW"),
-        'HOST': env("SQL_HOST"),
-        'PORT': env("SQL_PORT"),
+        'ENGINE': os.environ.get("SQL_ENGINE"),
+        'NAME': os.environ.get("DATABASE_NAME"),
+        'USER': os.environ.get("DATABASE_USER"),
+        'PASSWORD': os.environ.get("DATABASE_PW"),
+        'HOST': os.environ.get("SQL_HOST"),
+        'PORT': os.environ.get("SQL_PORT"),
     }
 }
 

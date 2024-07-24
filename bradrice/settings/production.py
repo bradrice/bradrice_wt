@@ -27,12 +27,12 @@ print(CSRF_TRUSTED_ORIGINS)
 # Database PostgreSQL
 DATABASES = {
     'default': {
-        'ENGINE': str(os.get("SQL_ENGINE")),
-        'NAME': str(os.get("DATABASE_NAME")),
-        'USER': str(os.get("DATABASE_USER")),
-        'PASSWORD': str(os.get("DATABASE_PW")),
-        'HOST': str(os.get("SQL_HOST")),
-        'PORT': str(os.get("SQL_PORT")),
+        'ENGINE': str(os.getenv("SQL_ENGINE")),
+        'NAME': str(os.getenv("DATABASE_NAME")),
+        'USER': str(os.getenv("DATABASE_USER")),
+        'PASSWORD': str(os.getenv("DATABASE_PW")),
+        'HOST': str(os.getenv("SQL_HOST")),
+        'PORT': str(os.getenv("SQL_PORT")),
     }
 }
 

@@ -9,7 +9,7 @@ load_dotenv()
 
 DEBUG = True
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.getenv("SECRET_KEY")
 
 ALLOWED_HOSTS = ["*"]
 
@@ -19,9 +19,9 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": str(os.get('DATABASE_NAME')),
-        "USER": str(os.get('DATABASE_USER')),
-        "PASSWORD": str(os.get('DATABASE_PW')),
+        "NAME": str(os.getenv('DATABASE_NAME')),
+        "USER": str(os.getenv('DATABASE_USER')),
+        "PASSWORD": str(os.getenv('DATABASE_PW')),
         "HOST": "db",
         "PORT": "5432",
     }

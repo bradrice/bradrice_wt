@@ -25,7 +25,7 @@ CSRF_TRUSTED_ORIGINS = ['https://icons.bradrice.com', 'http://0.0.0.0:8009']
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_DOMAIN = 'icons.bradrice.com'
 
-print(ALLOWED_HOSTS)
+print(CSRF_TRUSTED_ORIGINS)
 
 
 # Database PostgreSQL

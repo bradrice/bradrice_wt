@@ -1,6 +1,7 @@
 .env
 .env.prod
 .env.prod.db
+/media/
 
 
 postgres-data/

@@ -63,3 +63,7 @@ header {
 .page-form .helptext {
   font-style: italic;
 }
+
+main p {
+text-align: left;
+}
